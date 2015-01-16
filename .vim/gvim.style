@@ -1,0 +1,7 @@
+# include in /usr/share/themes/*/gtk-2.0/gtkrc
+# color the right and bottom edges of maximized gvim windows in monokai background color
+style "gvim" {
+    bg[NORMAL] = "#272822"
+}
+widget "vim-main-window.*GtkForm" style "gvim"
+
