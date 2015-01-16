@@ -1,7 +1,7 @@
 set nocompatible
 
 " font
-set guifont=Inconsolata-g\ for\ Powerline\ Medium\ 12
+set guifont=Monaco\ for\ Powerline\ Medium\ 12
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
@@ -65,9 +65,9 @@ vnoremap > >gv
 
 " Show line numbers and length
 set number  " show line numbers
-set tw=99   " width of document (used by gd)
+set tw=90   " width of document (used by gd)
 set wrap  " don't automatically wrap on load
-set colorcolumn=100
+set colorcolumn=90
 
 " Absolute and relative line numbers
 autocmd InsertEnter * :set norelativenumber
