@@ -1,7 +1,7 @@
 set nocompatible
 
 " font
-set guifont=Literation\ Mono\ Powerline\ 13
+set guifont=Literation\ Mono\ Powerline\ 12
 
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
