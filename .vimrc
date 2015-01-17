@@ -59,7 +59,7 @@ inoremap <c-r> <esc><c-r>i
 nnoremap <c-s> :w<CR>
 inoremap <c-s> <esc>:w<CR>i
 
-" easier moving of code blocks
+" Easier moving of code blocks
 vnoremap < <gv
 vnoremap > >gv
 
@@ -73,7 +73,6 @@ set colorcolumn=90
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
-" Useful settings
 set history=1000
 set undolevels=1000
 
@@ -84,7 +83,7 @@ set shiftwidth=4
 set shiftround
 set expandtab
 
-" Make search case insensitive
+" Search settings
 set hlsearch
 set incsearch
 set ignorecase
@@ -98,10 +97,8 @@ set noswapfile
 " Airline
 let g:airline_powerline_fonts=1
 set laststatus=2 "show statusline for single window
-" enable list of buffers
-let g:airline#extensions#tabline#enabled=1
-" show the filename
-let g:airline#extensions#tabline#fnamemod=':t'
+let g:airline#extensions#tabline#enabled=1 " enable list of buffers
+let g:airline#extensions#tabline#fnamemod=':t' " show the filenamea
 
 " Ctrlp
 let g:ctrlp_map='<c-p>'
@@ -112,10 +109,15 @@ set wildignore+=*_build/*
 let g:ctrlp_working_path_mode = 'wr'
 let g:ctrlp_show_hidden = 1
 
-" jedi-vim
-let g:jedi#rename_command="<leader>r"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#goto_definitions_command = "<leader>d"
-let g:jedi#popup_on_dot=0
-let g:jedi#popup_select_first=1
-let g:jedi#show_call_signatures=2
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
