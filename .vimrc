@@ -65,9 +65,9 @@ vnoremap > >gv
 
 " Show line numbers and length
 set number  " show line numbers
-set tw=90   " width of document (used by gd)
+set tw=80   " width of document (used by gd)
 set wrap  " don't automatically wrap on load
-set colorcolumn=90
+set colorcolumn=80
 
 " Absolute and relative line numbers
 autocmd InsertEnter * :set norelativenumber
@@ -106,7 +106,7 @@ let g:ctrlp_cmd='CtrlP'
 nnoremap <c-b> :CtrlPBuffer<CR>
 set wildignore+=*.pyc
 set wildignore+=*_build/*
-let g:ctrlp_working_path_mode = 'wr'
+let g:ctrlp_working_path_mode = 0
 let g:ctrlp_show_hidden = 1
 
 " Syntastic
