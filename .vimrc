@@ -66,8 +66,8 @@ vnoremap > >gv
 " Show line numbers and length
 set number  " show line numbers
 set tw=80   " width of document (used by gd)
-set wrap  " don't automatically wrap on load
 set colorcolumn=80
+set formatoptions+=t
 
 " Absolute and relative line numbers
 autocmd InsertEnter * :set norelativenumber
@@ -118,6 +118,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" dont't checl latex files
+let g:syntastic_mode_map = { 'mode': 'active',
+                          \ 'passive_filetypes': ['tex'] }
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"

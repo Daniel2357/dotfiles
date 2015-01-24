@@ -12,6 +12,8 @@ flags = [
     '-std=c++11',
     '-x',
     'c++',
+    '-I', '/usr/include',
+    '-I', '/usr/include/c++/4.9.2'
 ]
 
 
