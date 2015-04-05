@@ -125,7 +125,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-let g:ycm_confirm_extra_conf = 1
+let g:ycm_confirm_extra_conf = 0
 
 " Vim-Latex
 let g:latex_quickfix_ignore_all_warnings = 1
