@@ -46,18 +46,18 @@ nnoremap <leader>e :bd<CR>
 set clipboard=unnamedplus
 vnoremap <c-c> y
 nnoremap <c-v> p
-inoremap <c-v> <esc>pi
+inoremap <c-v> <esc>pa
 
 " Undo
 nnoremap <c-u> u
-inoremap <c-u> <esc>ui
+inoremap <c-u> <esc>ua
 
 " Redo
-inoremap <c-r> <esc><c-r>i
+inoremap <c-r> <esc><c-r>a
 
 " Quicksave command
 nnoremap <c-s> :w<CR>
-inoremap <c-s> <esc>:w<CR>i
+inoremap <c-s> <esc>:w<CR>a
 
 " Easier moving of code blocks
 vnoremap < <gv
@@ -126,6 +126,9 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
+
+inoremap <f2> <esc>:YcmCompleter GoTo<CR>a
+nnoremap <f2> :YcmCompleter GoTo<CR>
 
 " Vim-Latex
 let g:latex_quickfix_ignore_all_warnings = 1
