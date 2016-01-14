@@ -98,7 +98,7 @@ set noswapfile
 let g:airline_powerline_fonts=1
 set laststatus=2 "show statusline for single window
 let g:airline#extensions#tabline#enabled=1 " enable list of buffers
-let g:airline#extensions#tabline#fnamemod=':t' " show the filenamea
+let g:airline#extensions#tabline#fnamemod=':t' " show the filename
 
 " Ctrlp
 let g:ctrlp_map='<c-p>'
@@ -121,7 +121,7 @@ let g:syntastic_check_on_wq = 0
 
 " dont't check latex files
 let g:syntastic_mode_map = { 'mode': 'active',
-                          \ 'passive_filetypes': ['tex'] }
+                           \ 'passive_filetypes': ['tex', 'cuda'] }
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
@@ -132,3 +132,7 @@ nnoremap <f2> :YcmCompleter GoTo<CR>
 
 " Vim-Latex
 let g:latex_quickfix_ignore_all_warnings = 1
+
+" vim-clang-format
+map <C-F> :ClangFormat<cr>
+let g:clang_format#detect_style_file = 1
