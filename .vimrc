@@ -17,6 +17,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Enable syntax highlighting
 filetype plugin indent on
 syntax on
+" recognize .cuh files as cuda files
+autocmd BufNewFile,BufRead *.cuh set filetype=cuda
 
 " color scheme
 let g:molokai_original = 1
@@ -119,13 +121,16 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" dont't check latex files
+" dont't check latex or cuda files
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'passive_filetypes': ['tex', 'cuda'] }
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
+" dont show preview window
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
 
 inoremap <f2> <esc>:YcmCompleter GoTo<CR>a
 nnoremap <f2> :YcmCompleter GoTo<CR>
