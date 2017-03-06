@@ -1,2 +1,9 @@
 setenv EDITOR vim
-source /etc/profile.d/autojump.fish
+source /usr/share/autojump/autojump.fish
+
+# start X at login
+if status --is-login
+	if test -z "$DISPLAY" -a $XDG_VTNR = 1
+		exec startx -- -keeptty
+	end
+end
